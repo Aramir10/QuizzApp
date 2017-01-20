@@ -6,7 +6,8 @@ var choices2 = ["batman","superman","flash"];
 var choices3 = ["hey you","hola", "cheese"];
 var choices4 = [ "Java", "Python", "javascript"];
 
-var count = [];
+var count = 0;
+
 
 
 //Quiz App
@@ -34,7 +35,7 @@ console.log(QuizzClass1)};
 
 var QuizzClass2 = new QuizzClass();
 QuizzClass2.questions = 'Whats your favorite city';
-if(choices1 === "Brownsville"|| "Helotes"){
+if(choices1 === "Brownsville"|| "Austin"){
 	 count + 0
 	if ("San Antonio") {count +1
 	} else { alert("That is not an answer");
