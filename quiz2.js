@@ -2,18 +2,18 @@ var score = 0;
 
 function HOLA() {
     confirm("You will be propmted  to respond some questions");
-    alert("Each question has one possible answer from a list of answers and you'll get one point for each correct answer and if you het more than 4 points you passed the test");
+    alert("Each question has one possible answer from a list of answers and you'll get one point for each correct answer and if you hit more than 4 points you passed the test");
     var sure = prompt("If you want to continue type 'yes' otherwise 'no' ");
-    if (sure == "yes") {
-        alert("OK here we go");
+    if (sure == "yes" || "Yes" || "y"|| "Y") {
+        alert("OK lets  go");
     } else {
-        alert(" get out of here ");
+        alert(" Get out of here ");
     }}
     HOLA();
 
 function questQuiz(){
 //question1
-if (prompt(" Whats your favorite color 1) Blue 2) Red 3) White 3) Purple ") == 1) {
+if (prompt(" Whats your favorite color 1) Blue 2) Red 3) White 4) Purple ") == 1) {
     score++;
 }
 //question2
@@ -32,6 +32,10 @@ if (prompt(" Are you mad ?  1) Yes  2) No  3) Maybe " ) == 3) {
 if (prompt(" Which is the best Basket Ball team 1) Golden State 2) Spurs 3) Lakers 4) Mavericks" ) == 2) {
     score++;
 }}
+
+if (prompt("Which city do you prefer 1) San Antonio 2) Austin  3) Brownsville")== 1){
+	score++;
+}
 questQuiz();
 
 
@@ -44,20 +48,23 @@ if (score >= 4) {
 			alert("You lose try again");
 			questQuiz();
 
+};
+
+class Test {
+  constructor(quizz) {
+    this.quizz = quizz;
+  }
+
+  inquire() {
+    console.log(this.quizz + ' questions');
+  }
 }
 
+class Ask extends Test {
+  inquire() {
+    console.log(this.quizz + ' questions questions');
+  }
+}
 
-
-		//
-		// var questions = [{
-    //     question: 'Are you happy?',
-    //     answer: 'yes',
-    //     affirm: 'Yay! You got it right!',
-    //     rebuttal: 'Nope, you are definitely happy.'
-    // },
-    // {
-    //     question: 'Are you mad?',
-    //     answer: 'no',
-    //     affirm: 'Good job!',
-    //     rebuttal: 'Not right.'
-    // }];
+var d = new Ask('Questions');
+d.inquire();
